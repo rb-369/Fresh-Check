@@ -1,0 +1,51 @@
+# Documentation (excluded as per user instruction - do not push docs folder)
+docs/
+*.doc
+*.docx
+*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Data caches & large raw downloads (models and processed features/metrics are tracked)
+data/raw/
+*.tar.gz
+*.zip
+
+# Node / React
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.npm
+.eslintcache
+
+# Environment variables & local IDE configs
+.env
+.env.local
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "fresh_apple_1",
+    "filename": "sample_fresh_apple_1.jpg",
+    "label": "fresh_apple",
+    "displayName": "Fresh Apple",
+    "category": "fresh"
+  },
+  {
+    "id": "fresh_apple_2",
+    "filename": "sample_fresh_apple_2.jpg",
+    "label": "fresh_apple",
+    "displayName": "Fresh Apple",
+    "category": "fresh"
+  },
+  {
+    "id": "rotten_apple_1",
+    "filename": "sample_rotten_apple_1.jpg",
+    "label": "rotten_apple",
+    "displayName": "Rotten Apple",
+    "category": "rotten"
+  },
+  {
+    "id": "rotten_apple_2",
+    "filename": "sample_rotten_apple_2.jpg",
+    "label": "rotten_apple",
+    "displayName": "Rotten Apple",
+    "category": "rotten"
+  },
+  {
+    "id": "fresh_banana_1",
+    "filename": "sample_fresh_banana_1.jpg",
+    "label": "fresh_banana",
+    "displayName": "Fresh Banana",
+    "category": "fresh"
+  },
+  {
+    "id": "fresh_banana_2",
+    "filename": "sample_fresh_banana_2.jpg",
+    "label": "fresh_banana",
+    "displayName": "Fresh Banana",
+    "category": "fresh"
+  },
+  {
+    "id": "rotten_banana_1",
+    "filename": "sample_rotten_banana_1.jpg",
+    "label": "rotten_banana",
+    "displayName": "Rotten Banana",
+    "category": "rotten"
+  },
+  {
+    "id": "rotten_banana_2",
+    "filename": "sample_rotten_banana_2.jpg",
+    "label": "rotten_banana",
+    "displayName": "Rotten Banana",
+    "category": "rotten"
+  },
+  {
+    "id": "fresh_orange_1",
+    "filename": "sample_fresh_orange_1.jpg",
+    "label": "fresh_orange",
+    "displayName": "Fresh Orange",
+    "category": "fresh"
+  },
+  {
+    "id": "fresh_orange_2",
+    "filename": "sample_fresh_orange_2.jpg",
+    "label": "fresh_orange",
+    "displayName": "Fresh Orange",
+    "category": "fresh"
+  },
+  {
+    "id": "rotten_orange_1",
+    "filename": "sample_rotten_orange_1.jpg",
+    "label": "rotten_orange",
+    "displayName": "Rotten Orange",
+    "category": "rotten"
+  },
+  {
+    "id": "rotten_orange_2",
+    "filename": "sample_rotten_orange_2.jpg",
+    "label": "rotten_orange",
+    "displayName": "Rotten Orange",
+    "category": "rotten"
+  }
+]

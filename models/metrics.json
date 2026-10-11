@@ -1,0 +1,194 @@
+{
+  "dataset_summary": {
+    "test_sample_count": 54,
+    "num_classes": 6,
+    "classes": [
+      "fresh_apple",
+      "fresh_banana",
+      "fresh_orange",
+      "rotten_apple",
+      "rotten_banana",
+      "rotten_orange"
+    ],
+    "feature_representation": "MobileNetV2 (1280-D Embeddings)"
+  },
+  "primary_model": {
+    "name": "Random Forest Classifier",
+    "test_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_weighted": 1.0,
+    "per_class": {
+      "fresh_apple": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 9
+      },
+      "fresh_banana": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 9
+      },
+      "fresh_orange": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 9
+      },
+      "rotten_apple": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 9
+      },
+      "rotten_banana": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 9
+      },
+      "rotten_orange": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 9
+      }
+    }
+  },
+  "confusion_matrix": {
+    "classes": [
+      "fresh_apple",
+      "fresh_banana",
+      "fresh_orange",
+      "rotten_apple",
+      "rotten_banana",
+      "rotten_orange"
+    ],
+    "raw_matrix": [
+      [
+        9,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        9,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        9,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        9
+      ]
+    ],
+    "normalized_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "model_comparison": [
+    {
+      "model_name": "Random Forest (Ensemble)",
+      "test_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "type": "Primary (Tuned Ensemble)"
+    },
+    {
+      "model_name": "Support Vector Machine (RBF)",
+      "test_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "type": "Baseline (Kernelized Linear)"
+    },
+    {
+      "model_name": "Decision Tree (Single)",
+      "test_accuracy": 0.9259259259259259,
+      "macro_f1": 0.9262254901960785,
+      "weighted_f1": 0.9262254901960785,
+      "type": "Baseline (Single Estimator)"
+    }
+  ]
+}

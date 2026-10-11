@@ -1,0 +1,66 @@
+{
+  "best_rf_params": {
+    "n_estimators": 50,
+    "max_depth": 10,
+    "min_samples_split": 2
+  },
+  "tuning_log": [
+    {
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 10,
+        "min_samples_split": 2
+      },
+      "val_accuracy": 1.0
+    },
+    {
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 15,
+        "min_samples_split": 2
+      },
+      "val_accuracy": 1.0
+    },
+    {
+      "params": {
+        "n_estimators": 100,
+        "max_depth": null,
+        "min_samples_split": 2
+      },
+      "val_accuracy": 1.0
+    },
+    {
+      "params": {
+        "n_estimators": 150,
+        "max_depth": null,
+        "min_samples_split": 2
+      },
+      "val_accuracy": 1.0
+    },
+    {
+      "params": {
+        "n_estimators": 100,
+        "max_depth": null,
+        "min_samples_split": 5
+      },
+      "val_accuracy": 1.0
+    }
+  ],
+  "feature_dim": 1280,
+  "classes": [
+    "fresh_apple",
+    "fresh_banana",
+    "fresh_orange",
+    "rotten_apple",
+    "rotten_banana",
+    "rotten_orange"
+  ],
+  "class_to_idx": {
+    "fresh_apple": 0,
+    "fresh_banana": 1,
+    "fresh_orange": 2,
+    "rotten_apple": 3,
+    "rotten_banana": 4,
+    "rotten_orange": 5
+  }
+}

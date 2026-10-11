@@ -1,0 +1,1462 @@
+{
+  "train": [
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0017.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0026.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0008.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0048.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0043.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0005.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0023.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0031.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0010.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0012.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0045.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0014.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0049.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0014.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0004.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0009.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0016.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0022.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0053.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0015.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0021.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0021.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0028.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0043.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0042.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0001.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0027.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0032.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0028.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0016.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0013.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0056.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0002.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0044.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0047.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0053.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0047.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0015.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0034.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0020.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0020.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0015.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0024.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0022.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0051.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0013.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0007.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0053.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0037.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0059.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0060.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0051.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0032.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0027.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0002.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0037.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0036.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0046.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0035.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0034.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0030.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0031.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0055.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0037.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0013.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0018.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0035.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0042.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0040.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0029.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0012.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0031.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0051.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0039.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0017.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0006.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0034.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0055.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0046.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0056.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0018.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0029.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0038.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0054.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0010.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0016.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0049.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0058.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0039.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0025.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0059.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0018.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0040.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0045.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0010.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0019.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0010.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0030.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0031.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0002.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0059.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0007.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0012.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0058.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0010.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0011.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0045.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0037.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0052.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0042.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0025.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0023.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0005.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0003.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0020.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0024.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0006.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0045.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0057.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0060.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0018.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0048.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0058.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0056.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0041.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0046.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0041.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0039.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0001.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0050.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0056.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0001.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0003.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0045.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0023.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0026.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0035.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0001.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0004.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0059.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0044.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0024.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0041.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0043.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0005.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0050.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0004.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0021.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0044.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0046.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0027.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0056.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0011.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0023.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0005.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0006.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0022.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0058.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0042.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0053.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0014.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0017.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0042.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0054.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0037.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0011.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0019.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0053.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0033.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0028.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0028.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0013.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0030.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0031.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0026.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0043.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0027.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0030.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0032.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0049.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0010.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0038.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0016.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0032.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0021.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0015.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0057.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0019.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0049.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0009.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0005.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0008.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0033.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0051.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0043.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0057.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0032.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0054.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0005.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0030.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0012.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0057.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0060.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0038.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0004.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0019.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0004.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0024.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0015.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0009.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0055.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0046.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0014.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0047.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0034.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0055.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0054.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0017.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0031.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0007.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0021.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0025.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0013.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0012.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0003.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0051.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0026.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0007.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0047.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0025.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0036.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0009.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0038.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0058.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0017.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0057.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0052.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0034.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0014.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0038.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0055.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0033.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0001.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0002.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0059.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0054.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0039.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0049.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0045.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0055.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0047.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0049.jpg",
+      "label": "fresh_banana"
+    }
+  ],
+  "val": [
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0036.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0060.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0050.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0047.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0002.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0037.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0051.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0044.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0028.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0004.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0024.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0012.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0033.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0040.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0029.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0003.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0042.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0007.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0036.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0053.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0016.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0026.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0033.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0033.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0027.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0030.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0014.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0052.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0035.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0059.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0003.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0011.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0034.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0041.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0060.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0023.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0052.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0054.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0001.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0018.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0018.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0052.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0029.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0020.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0020.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0006.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0050.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0048.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0013.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0020.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0041.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0021.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0036.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0029.jpg",
+      "label": "rotten_orange"
+    }
+  ],
+  "test": [
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0028.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0009.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0019.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0022.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0040.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0008.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0060.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0022.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0039.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0035.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0052.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0048.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0011.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0041.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0048.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0050.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0019.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0003.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0026.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0058.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0016.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0038.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0017.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0048.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0006.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0007.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0044.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0057.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0039.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0040.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0025.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0043.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0025.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0023.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0002.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0027.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0015.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0006.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0035.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0040.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_banana\\fresh_banana_0008.jpg",
+      "label": "fresh_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0008.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0024.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0011.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0046.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0036.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0022.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0032.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\rotten_banana\\rotten_banana_0029.jpg",
+      "label": "rotten_banana"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0008.jpg",
+      "label": "fresh_apple"
+    },
+    {
+      "path": "data\\raw\\rotten_apple\\rotten_apple_0044.jpg",
+      "label": "rotten_apple"
+    },
+    {
+      "path": "data\\raw\\fresh_orange\\fresh_orange_0009.jpg",
+      "label": "fresh_orange"
+    },
+    {
+      "path": "data\\raw\\rotten_orange\\rotten_orange_0056.jpg",
+      "label": "rotten_orange"
+    },
+    {
+      "path": "data\\raw\\fresh_apple\\fresh_apple_0050.jpg",
+      "label": "fresh_apple"
+    }
+  ],
+  "classes": [
+    "fresh_apple",
+    "fresh_banana",
+    "fresh_orange",
+    "rotten_apple",
+    "rotten_banana",
+    "rotten_orange"
+  ],
+  "counts": {
+    "train": 252,
+    "val": 54,
+    "test": 54,
+    "total": 360
+  }
+}
