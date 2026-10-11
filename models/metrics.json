@@ -185,9 +185,9 @@
     },
     {
       "model_name": "Decision Tree (Single)",
-      "test_accuracy": 0.9259259259259259,
-      "macro_f1": 0.9262254901960785,
-      "weighted_f1": 0.9262254901960785,
+      "test_accuracy": 0.7777777777777778,
+      "macro_f1": 0.7800495929365899,
+      "weighted_f1": 0.7800495929365899,
       "type": "Baseline (Single Estimator)"
     }
   ]
