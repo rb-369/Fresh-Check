@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Layers, ShieldCheck, Cpu, GitFork, AlertCircle } from 'lucide-react';
+import { Layers, ShieldCheck, Cpu, GitFork } from 'lucide-react';
 
 export default function MethodologyView() {
   return (
@@ -38,43 +38,6 @@ export default function MethodologyView() {
             </h4>
             <p className="arch-step-desc">
               We enforce a <strong>Stratified Train (70%) / Validation (15%) / Test (15%) split</strong>. Hyperparameters (<code className="code-tag">n_estimators</code>, <code className="code-tag">max_depth</code>) are tuned purely on validation data. The test split is kept strictly unseen until final evaluation to guarantee zero data leakage.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Critical Theory & Viva Insights */}
-      <div className="glass-card">
-        <h3 className="card-title">
-          <AlertCircle size={20} className="icon-yellow" />
-          Key Machine Learning & Viva Theoretical Principles
-        </h3>
-        
-        <div className="viva-principles-list">
-          <div className="principle-callout border-left-blue">
-            <strong className="principle-heading">
-              Why Random Forest Over a Single Decision Tree?
-            </strong>
-            <p className="principle-body">
-              A single decision tree creates hard orthogonal splits and suffers from high variance (sensitive to minor training variations). Random Forest aggregates multiple decorrelated trees via bootstrap aggregating and random feature selection, effectively reducing variance while maintaining low bias.
-            </p>
-          </div>
-
-          <div className="principle-callout border-left-yellow">
-            <strong className="principle-heading">
-              Why "Model Confidence" Rather Than "Calibrated Freshness"?
-            </strong>
-            <p className="principle-body">
-              In scikit-learn, Random Forest's <code className="code-tag">predict_proba()</code> computes the fraction of decision trees in the ensemble voting for a given class. While highly indicative of classification certainty, tree vote fractions are not calibrated posterior probabilities in a Bayesian sense. FreshCheck explicitly denotes this metric as <em>Model Confidence</em>.
-            </p>
-          </div>
-
-          <div className="principle-callout border-left-red">
-            <strong className="principle-heading">
-              Responsible AI & Food Safety Limitation
-            </strong>
-            <p className="principle-body">
-              An optical camera only records 2D surface reflectance. It cannot detect internal rotting, core mold, bacterial toxins (e.g. <em>Salmonella</em>, <em>E. coli</em>), chemical contaminants, or spoilage odors. The system provides visual guidance only and never provides a medical or safety guarantee.
             </p>
           </div>
         </div>
