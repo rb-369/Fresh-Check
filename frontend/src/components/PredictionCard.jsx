@@ -24,8 +24,8 @@ export default function PredictionCard({ result, previewUrl }) {
 
       <div>
         <h2 className="produce-headline">{result.display_name}</h2>
-        <p style={{ fontSize: '0.85rem', color: '#9ca3af', marginTop: '0.2rem' }}>
-          Detected Produce Category: <strong style={{ color: '#fff' }}>{result.produce_type}</strong>
+        <p className="produce-category">
+          Detected Produce Category: <strong className="produce-type-label">{result.produce_type}</strong>
         </p>
       </div>
 
@@ -44,51 +44,40 @@ export default function PredictionCard({ result, previewUrl }) {
           />
         </div>
         <p className="confidence-caveat">
-          * Note: Random Forest vote proportion across decision trees, not a guaranteed biological freshness measure.
+          * Random Forest vote proportion across decision trees; not a guaranteed biological freshness measure.
         </p>
       </div>
 
       {/* Visual Observation */}
       <div className="assessment-box">
-        <p style={{ fontWeight: 600, color: '#e5e7eb', marginBottom: '0.25rem' }}>
+        <p className="assessment-title">
           Visual Observation:
         </p>
-        <p>{result.visual_assessment}</p>
+        <p className="assessment-text">{result.visual_assessment}</p>
       </div>
 
       {/* Responsible AI & Safety Advisory */}
       <div className="safety-alert">
-        <ShieldAlert size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+        <ShieldAlert size={20} className="safety-icon" />
         <div>
-          <strong style={{ display: 'block', marginBottom: '0.2rem' }}>Responsible AI & Food Safety Advisory</strong>
-          <span>{result.safety_advisory}</span>
+          <strong className="safety-title">Responsible AI & Food Safety Advisory</strong>
+          <span className="safety-desc">{result.safety_advisory}</span>
         </div>
       </div>
 
       {/* Detailed Tree Ensemble Voting Distribution */}
       {result.class_probabilities && (
-        <div style={{ marginTop: '0.5rem' }}>
+        <div className="breakdown-wrapper">
           <button
             onClick={() => setShowProbabilities(!showProbabilities)}
-            style={{
-              background: 'transparent',
-              border: 'none',
-              color: '#9ca3af',
-              fontSize: '0.82rem',
-              fontWeight: 600,
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.4rem',
-              padding: '0.25rem 0'
-            }}
+            className="breakdown-toggle-btn"
           >
             <span>Tree Ensemble Voting Breakdown ({Object.keys(result.class_probabilities).length} Classes)</span>
             {showProbabilities ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
           </button>
 
           {showProbabilities && (
-            <div style={{ marginTop: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+            <div className="breakdown-list">
               {Object.entries(result.class_probabilities)
                 .sort((a, b) => b[1] - a[1])
                 .map(([cls, prob]) => {
@@ -97,20 +86,12 @@ export default function PredictionCard({ result, previewUrl }) {
                   return (
                     <div
                       key={cls}
-                      style={{
-                        background: isWinner ? 'rgba(16, 185, 129, 0.1)' : 'rgba(0,0,0,0.2)',
-                        padding: '0.4rem 0.75rem',
-                        borderRadius: '6px',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        fontSize: '0.8rem',
-                        border: isWinner ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid transparent'
-                      }}
+                      className={`breakdown-item ${isWinner ? 'winner' : ''}`}
                     >
-                      <span style={{ color: isWinner ? '#34d399' : '#d1d5db', fontWeight: isWinner ? 700 : 500 }}>
+                      <span className="breakdown-label">
                         {cls.replace('_', ' ').toUpperCase()}
                       </span>
-                      <span style={{ fontFamily: 'var(--font-mono)', color: isWinner ? '#34d399' : '#9ca3af' }}>
+                      <span className="breakdown-percent">
                         {probPct}% votes
                       </span>
                     </div>

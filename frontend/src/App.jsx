@@ -115,7 +115,7 @@ export default function App() {
             {/* Left Column: Image Input & Controls */}
             <div className="glass-card">
               <h2 className="card-title">
-                <Sparkles size={20} color="#10b981" />
+                <Sparkles size={20} className="icon-blue" />
                 Produce Visual Scanner
               </h2>
               <p className="card-desc">
@@ -164,7 +164,7 @@ export default function App() {
 
               {/* Action Button */}
               {selectedImage && !predictionResult && (
-                <div style={{ marginTop: '1.25rem' }}>
+                <div className="action-btn-wrapper">
                   <button
                     className="btn-primary"
                     onClick={() => runPrediction()}
@@ -186,8 +186,8 @@ export default function App() {
               )}
 
               {apiError && (
-                <div style={{ marginTop: '1rem', padding: '0.75rem', background: 'rgba(239, 68, 68, 0.15)', border: '1px solid rgba(239, 68, 68, 0.3)', borderRadius: '8px', color: '#fca5a5', fontSize: '0.82rem', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                  <AlertCircle size={16} style={{ flexShrink: 0 }} />
+                <div className="api-error-alert">
+                  <AlertCircle size={16} className="api-error-icon" />
                   <span>{apiError}</span>
                 </div>
               )}
@@ -205,12 +205,12 @@ export default function App() {
               {predictionResult ? (
                 <PredictionCard result={predictionResult} previewUrl={selectedImage?.dataUrl} />
               ) : (
-                <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '360px', textAlign: 'center', padding: '2rem' }}>
-                  <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔍</div>
-                  <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.4rem' }}>
+                <div className="glass-card awaiting-card">
+                  <div className="awaiting-icon">🔍</div>
+                  <h3 className="awaiting-title">
                     Awaiting Produce Image
                   </h3>
-                  <p style={{ color: '#9ca3af', fontSize: '0.85rem', maxWidth: '320px', lineHeight: 1.5 }}>
+                  <p className="awaiting-desc">
                     Snap a photo with your camera, upload an image from your files, or tap any sample preset below to inspect freshness.
                   </p>
                 </div>

@@ -73,9 +73,9 @@ export default function CameraCapture({ onCapture, disabled }) {
 
   if (errorMsg) {
     return (
-      <div style={{ textAlign: 'center', padding: '2rem 1rem', background: 'rgba(239, 68, 68, 0.1)', borderRadius: '12px' }}>
-        <p style={{ color: '#f87171', fontSize: '0.88rem', marginBottom: '1rem' }}>{errorMsg}</p>
-        <button className="btn-primary" style={{ width: 'auto' }} onClick={startCamera}>
+      <div className="camera-error-box">
+        <p className="camera-error-text">{errorMsg}</p>
+        <button className="btn-primary camera-retry-btn" onClick={startCamera}>
           Retry Camera
         </button>
       </div>
@@ -97,18 +97,7 @@ export default function CameraCapture({ onCapture, disabled }) {
         <button
           onClick={toggleFacingMode}
           title="Switch camera"
-          style={{
-            background: 'rgba(0, 0, 0, 0.6)',
-            border: '1px solid rgba(255,255,255,0.2)',
-            color: '#fff',
-            borderRadius: '50%',
-            width: '44px',
-            height: '44px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer'
-          }}
+          className="switch-cam-btn"
         >
           <RefreshCw size={16} />
         </button>

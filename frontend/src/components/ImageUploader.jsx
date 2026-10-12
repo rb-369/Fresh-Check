@@ -62,7 +62,7 @@ export default function ImageUploader({ onImageSelected, disabled }) {
         disabled={disabled}
       />
       <div className="dropzone-icon">
-        <UploadCloud size={44} color="#10b981" />
+        <UploadCloud size={42} className="dropzone-cloud-icon" />
       </div>
       <p className="dropzone-text">Click or drag & drop produce photo here</p>
       <p className="dropzone-hint">Supports JPEG, PNG, WebP up to 10MB</p>

@@ -6,11 +6,11 @@ export default function SamplePicker({ samples, onSelectSample, disabled }) {
 
   return (
     <div className="sample-gallery-section">
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.6rem' }}>
-        <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+      <div className="sample-header-row">
+        <span className="sample-heading">
           Quick 1-Click Viva Test Presets
         </span>
-        <span style={{ fontSize: '0.74rem', color: '#6b7280' }}>
+        <span className="sample-subheading">
           Select any sample to test instantly
         </span>
       </div>

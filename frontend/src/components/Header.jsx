@@ -8,13 +8,13 @@ export default function Header({ activeTab, setActiveTab }) {
         <div className="logo-badge" role="img" aria-label="FreshCheck Logo">
           🍏
         </div>
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+        <div className="brand-text-block">
+          <div className="brand-headline-row">
             <h1 className="brand-title">FreshCheck</h1>
             <span className="clg-badge">ML Microproject</span>
           </div>
           <p className="brand-subtitle">
-            Visual Food Freshness Classifier • MobileNetV2 + Random Forest
+            Visual Food Freshness Classifier · MobileNetV2 + Random Forest
           </p>
         </div>
       </div>
@@ -25,21 +25,24 @@ export default function Header({ activeTab, setActiveTab }) {
           onClick={() => setActiveTab('scanner')}
         >
           <Sparkles size={16} />
-          Freshness Scanner
+          <span className="tab-label-full">Freshness Scanner</span>
+          <span className="tab-label-short">Scanner</span>
         </button>
         <button
           className={`tab-btn ${activeTab === 'analytics' ? 'active' : ''}`}
           onClick={() => setActiveTab('analytics')}
         >
           <Activity size={16} />
-          Model Analytics
+          <span className="tab-label-full">Model Analytics</span>
+          <span className="tab-label-short">Analytics</span>
         </button>
         <button
           className={`tab-btn ${activeTab === 'methodology' ? 'active' : ''}`}
           onClick={() => setActiveTab('methodology')}
         >
           <BookOpen size={16} />
-          Methodology & Ethics
+          <span className="tab-label-full">Methodology & Ethics</span>
+          <span className="tab-label-short">Methodology</span>
         </button>
       </nav>
     </header>
