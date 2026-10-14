@@ -26,7 +26,36 @@ import {
 } from './api/config';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('scanner');
+  const getInitialTab = () => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const tabParam = params.get('tab');
+      if (tabParam && ['scanner', 'analytics', 'history', 'methodology'].includes(tabParam)) {
+        return tabParam;
+      }
+      const hash = window.location.hash.replace('#', '');
+      if (hash && ['scanner', 'analytics', 'history', 'methodology'].includes(hash)) {
+        return hash;
+      }
+    } catch {
+      // fallback
+    }
+    return 'scanner';
+  };
+
+  const [activeTab, setActiveTabState] = useState(getInitialTab);
+
+  const setActiveTab = (tab) => {
+    setActiveTabState(tab);
+    try {
+      const url = new URL(window.location);
+      url.searchParams.set('tab', tab);
+      window.history.replaceState({}, '', url);
+    } catch {
+      // fallback
+    }
+  };
+
   const [inputMode, setInputMode] = useState('upload'); // 'upload' or 'camera'
   const [selectedImage, setSelectedImage] = useState(null); // { file, dataUrl, name }
   const [samples, setSamples] = useState([]);
