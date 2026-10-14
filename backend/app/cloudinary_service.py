@@ -17,6 +17,9 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 load_dotenv(ROOT_DIR / ".env")
 
+import base64
+from PIL import Image
+
 class CloudinaryService:
     def __init__(self):
         self.is_configured = False
@@ -42,16 +45,34 @@ class CloudinaryService:
             self.is_configured = True
             print(f"[Cloudinary] Configured for cloud: '{cloud_name}'.")
         else:
-            print("[Cloudinary] Notice: Cloudinary credentials not configured. Image URLs will not be saved to Cloudinary.")
+            print("[Cloudinary] Notice: Cloudinary credentials not configured. Image URLs will fallback to compressed thumbnails.")
             self.is_configured = False
 
-    def upload_image_bytes(self, image_bytes: bytes, filename: Optional[str] = None) -> Optional[Dict[str, str]]:
+    def create_thumbnail_data_uri(self, image_bytes: bytes, max_dim: int = 250) -> Optional[str]:
+        """Compresses image to a lightweight JPEG data URI for seamless fallback storage in MongoDB."""
+        try:
+            img = Image.open(io.BytesIO(image_bytes))
+            if img.mode != "RGB":
+                img = img.convert("RGB")
+            img.thumbnail((max_dim, max_dim), Image.Resampling.LANCZOS)
+            out_buf = io.BytesIO()
+            img.save(out_buf, format="JPEG", quality=65, optimize=True)
+            b64 = base64.b64encode(out_buf.getvalue()).decode("utf-8")
+            return f"data:image/jpeg;base64,{b64}"
+        except Exception as e:
+            print(f"[Thumbnail] Failed to generate data URI: {e}")
+            return None
+
+    def upload_image_bytes(self, image_bytes: bytes, filename: Optional[str] = None) -> Optional[Dict[str, Optional[str]]]:
         """
         Uploads image byte payload directly to Cloudinary folder 'freshcheck_scans'.
-        Returns dict with 'url' and 'public_id' on success, or None on failure.
+        Returns dict with 'url' and 'public_id' on success.
+        If Cloudinary is unconfigured or fails (e.g. missing permissions), gracefully falls back
+        to a high-efficiency base64 thumbnail stored directly in MongoDB Atlas.
         """
         if not self.is_configured:
-            return None
+            thumb_url = self.create_thumbnail_data_uri(image_bytes)
+            return {"url": thumb_url, "public_id": None}
 
         try:
             # Upload using in-memory BytesIO stream
@@ -71,8 +92,9 @@ class CloudinaryService:
                 "public_id": upload_result.get("public_id")
             }
         except Exception as e:
-            print(f"[Cloudinary] Upload failed: {e}")
-            return None
+            print(f"[Cloudinary] Upload notice: {e}. Falling back to compressed thumbnail.")
+            thumb_url = self.create_thumbnail_data_uri(image_bytes)
+            return {"url": thumb_url, "public_id": None}
 
     def delete_image(self, public_id: str) -> bool:
         """Deletes an image from Cloudinary by its public ID."""
