@@ -52,6 +52,19 @@ class FreshCheckModelService:
         print(f"FreshCheck Model Service is ready with classes: {self.classes}")
         return True
 
+    def warmup(self):
+        """Warms up PyTorch MobileNetV2 and Random Forest to eliminate first-request latency spike."""
+        if not self.is_ready:
+            return
+        try:
+            print("Warming up MobileNetV2 and inference pipeline...")
+            dummy_img = Image.new("RGB", (224, 224), color=(128, 128, 128))
+            dummy_feat = self.feature_extractor.extract_single(dummy_img).reshape(1, -1)
+            self.model.predict_proba(dummy_feat)
+            print("Model warmup complete (latency ready).")
+        except Exception as e:
+            print(f"Warmup notice: {e}")
+
     def predict_image(self, image_bytes: bytes) -> Dict[str, Any]:
         """Runs end-to-end inference on uploaded image bytes."""
         if not self.is_ready:
@@ -88,23 +101,35 @@ class FreshCheckModelService:
                 produce_type = name
                 break
 
-        freshness_status = "fresh" if "fresh" in predicted_class else "spoiled"
-        display_name = predicted_class.replace("_", " ").title()
+        # Confidence Threshold: Random Forest across 6 classes has random baseline 16.7%.
+        # If maximum confidence is below 50%, the image is likely out-of-distribution (non-fruit, wallpaper, noise).
+        CONFIDENCE_THRESHOLD = 0.50
 
-        # Class probabilities map
-        class_probs = {self.classes[i]: round(float(probs[i]), 4) for i in range(len(self.classes))}
-
-        # Visual description
-        if freshness_status == "fresh":
+        if confidence < CONFIDENCE_THRESHOLD:
+            freshness_status = "uncertain"
+            display_name = f"Uncertain ({produce_type}?)"
+            visual_assessment = (
+                f"Low model confidence ({confidence * 100.0:.1f}%). The uploaded image does not strongly match "
+                f"the trained visual characteristics of an apple, banana, or orange, and may be an unrecognized or non-produce object. "
+                "Please upload a clear, focused photograph of a supported fruit for reliable inspection."
+            )
+        elif "fresh" in predicted_class:
+            freshness_status = "fresh"
+            display_name = predicted_class.replace("_", " ").title()
             visual_assessment = (
                 f"Surface appearance of the {produce_type} looks visually intact "
                 "with normal color uniformity and no apparent rot, bruising, or fungal growth."
             )
         else:
+            freshness_status = "spoiled"
+            display_name = predicted_class.replace("_", " ").title()
             visual_assessment = (
                 f"Surface of the {produce_type} shows visible indications of spoilage, "
                 "such as surface discoloration, browning, softening, or fungal mold."
             )
+
+        # Class probabilities map
+        class_probs = {self.classes[i]: round(float(probs[i]), 4) for i in range(len(self.classes))}
 
         safety_advisory = (
             "Responsible AI Notice: Visual assessment only. Surface photographs cannot determine "

@@ -50,7 +50,9 @@ model_service = FreshCheckModelService(MODELS_DIR)
 async def startup_event():
     print("Starting FreshCheck API...")
     if MODELS_DIR.exists():
-        model_service.load()
+        loaded = model_service.load()
+        if loaded:
+            model_service.warmup()
 
 @app.get("/api/health")
 def health_check():

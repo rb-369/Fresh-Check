@@ -11,7 +11,7 @@ class PredictionResponse(BaseModel):
     predicted_class: str = Field(..., description="Raw model class, e.g. 'fresh_apple'")
     display_name: str = Field(..., description="Human-readable label, e.g. 'Fresh Apple'")
     produce_type: str = Field(..., description="Detected produce, e.g. 'Apple'")
-    freshness_status: str = Field(..., description="'fresh' or 'spoiled'")
+    freshness_status: str = Field(..., description="'fresh', 'spoiled', or 'uncertain'")
     model_confidence: float = Field(..., ge=0.0, le=1.0, description="Random forest tree ensemble vote fraction")
     model_confidence_percent: str = Field(..., description="Formatted confidence percentage string")
     class_probabilities: Dict[str, float] = Field(..., description="Vote distribution across all classes")

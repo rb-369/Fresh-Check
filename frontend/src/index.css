@@ -657,12 +657,14 @@ body {
 }
 
 .sample-name {
-  font-size: 0.73rem;
+  font-size: 0.70rem;
   font-weight: 700;
   color: var(--text-main);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  line-height: 1.15;
+  text-align: center;
+  word-break: break-word;
+  padding: 0 1px;
 }
 
 .sample-status-dot {
@@ -716,6 +718,12 @@ body {
   border: 1px solid var(--color-red-border);
 }
 
+.status-badge.uncertain {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
 .latency-pill {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -743,6 +751,37 @@ body {
 .produce-type-label {
   color: var(--text-main);
   font-weight: 700;
+}
+
+/* Out-of-Distribution Warning Box */
+.ood-warning-box {
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-left: 4px solid #f59e0b;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+}
+
+.ood-warning-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #b45309;
+  font-size: 0.88rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+
+.ood-warning-icon {
+  color: #d97706;
+  flex-shrink: 0;
+}
+
+.ood-warning-text {
+  font-size: 0.82rem;
+  color: #92400e;
+  line-height: 1.45;
+  margin: 0;
 }
 
 /* Confidence Gauge */
@@ -793,6 +832,10 @@ body {
 
 .gauge-spoiled {
   background: var(--color-red);
+}
+
+.gauge-uncertain {
+  background: #f59e0b;
 }
 
 .confidence-caveat {
@@ -1983,7 +2026,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .backend-status-pill {
