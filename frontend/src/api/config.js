@@ -106,7 +106,7 @@ export async function checkBackendHealth(targetBaseUrl = null) {
     const targetUrl = base ? `${base}/api/health` : '/api/health';
 
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 7000);
+    const timeoutId = setTimeout(() => controller.abort(), 15000);
 
     const res = await fetch(targetUrl, {
       signal: controller.signal,
@@ -134,7 +134,7 @@ export async function checkBackendHealth(targetBaseUrl = null) {
     };
   } catch (err) {
     if (err.name === 'AbortError') {
-      return { ok: false, error: 'Connection timed out (7 seconds).' };
+      return { ok: false, error: 'Connection timed out (15 seconds). Try clicking Test Ping again.' };
     }
     return {
       ok: false,
