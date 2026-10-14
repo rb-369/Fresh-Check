@@ -24,7 +24,7 @@ export default function SamplePicker({ samples, onSelectSample, disabled }) {
     <div className="sample-gallery-section">
       <div className="sample-header-row">
         <span className="sample-heading">
-          1-Click Viva Presets · 6 Classes
+          1-Click Presets · 6 Classes
         </span>
         <span className="sample-subheading">
           Tap any produce to test
