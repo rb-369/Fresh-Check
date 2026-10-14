@@ -18,6 +18,8 @@ class PredictionResponse(BaseModel):
     visual_assessment: str = Field(..., description="Objective surface visual status")
     safety_advisory: str = Field(..., description="Responsible AI food safety and visual-only disclaimer")
     inference_time_ms: float = Field(..., description="Total pipeline latency in milliseconds")
+    image_url: Optional[str] = Field(None, description="Cloudinary CDN hosted URL of the uploaded produce image")
+    history_id: Optional[str] = Field(None, description="MongoDB Atlas document ID")
 
 class ModelComparisonItem(BaseModel):
     model_name: str
@@ -45,3 +47,24 @@ class SampleImageItem(BaseModel):
     displayName: str
     category: str
     url: str
+
+class HistoryItem(BaseModel):
+    id: str
+    image_url: Optional[str] = None
+    predicted_class: str
+    display_name: str
+    produce_type: str
+    freshness_status: str
+    model_confidence: float
+    model_confidence_percent: str
+    visual_assessment: str
+    safety_advisory: Optional[str] = None
+    inference_time_ms: Optional[float] = None
+    class_probabilities: Optional[Dict[str, float]] = None
+    created_at: Optional[str] = None
+
+class HistoryResponse(BaseModel):
+    items: List[HistoryItem]
+    total: int
+    db_connected: bool
+    db_status: str

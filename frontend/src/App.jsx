@@ -6,6 +6,7 @@ import PredictionCard from './components/PredictionCard';
 import SamplePicker from './components/SamplePicker';
 import AnalyticsView from './components/AnalyticsView';
 import MethodologyView from './components/MethodologyView';
+import HistoryView from './components/HistoryView';
 import BackendConnectModal from './components/BackendConnectModal';
 import ModelReadyHud from './components/ModelReadyHud';
 import {
@@ -306,6 +307,8 @@ export default function App() {
         )}
 
         {activeTab === 'analytics' && <AnalyticsView />}
+
+        {activeTab === 'history' && <HistoryView />}
 
         {activeTab === 'methodology' && <MethodologyView />}
       </main>

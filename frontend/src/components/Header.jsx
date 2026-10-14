@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Activity, BookOpen, Server } from 'lucide-react';
+import { Sparkles, Activity, BookOpen, History, Server } from 'lucide-react';
 
 export default function Header({
   activeTab,
@@ -41,6 +41,14 @@ export default function Header({
             <Activity size={16} />
             <span className="tab-label-full">Model Analytics</span>
             <span className="tab-label-short">Analytics</span>
+          </button>
+          <button
+            className={`tab-btn ${activeTab === 'history' ? 'active' : ''}`}
+            onClick={() => setActiveTab('history')}
+          >
+            <History size={16} />
+            <span className="tab-label-full">Scan History</span>
+            <span className="tab-label-short">History</span>
           </button>
           <button
             className={`tab-btn ${activeTab === 'methodology' ? 'active' : ''}`}

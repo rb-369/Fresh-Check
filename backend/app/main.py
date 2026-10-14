@@ -12,8 +12,11 @@ from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
+from typing import Optional
 from backend.app.model_service import FreshCheckModelService
-from backend.app.schemas import PredictionResponse
+from backend.app.schemas import PredictionResponse, HistoryResponse, HistoryItem
+from backend.app.db import db_client
+from backend.app.cloudinary_service import cloudinary_service
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 MODELS_DIR = BASE_DIR / "models"
@@ -56,19 +59,21 @@ async def startup_event():
 
 @app.get("/api/health")
 def health_check():
-    """Health check and model readiness probe."""
+    """Health check, model readiness, MongoDB Atlas & Cloudinary status probe."""
     return {
         "status": "online",
         "model_ready": model_service.is_ready,
         "classes": model_service.classes,
-        "device": "CPU / MobileNetV2"
+        "device": "CPU / MobileNetV2",
+        "mongodb": db_client.check_health(),
+        "cloudinary_ready": cloudinary_service.is_configured
     }
 
 @app.post("/api/predict", response_model=PredictionResponse)
 async def predict_freshness(file: UploadFile = File(...)):
     """
-    Classifies food item and returns model confidence, visual observations,
-    and responsible food safety advisory.
+    Classifies food item, uploads image to Cloudinary, logs scan in MongoDB Atlas,
+    and returns model confidence, visual observations, and food safety advisory.
     """
     if not model_service.is_ready:
         loaded = model_service.load()
@@ -83,12 +88,61 @@ async def predict_freshness(file: UploadFile = File(...)):
         raise HTTPException(status_code=400, detail="Uploaded file is empty.")
 
     try:
+        # Run ML model prediction
         result = model_service.predict_image(contents)
+
+        # Upload image to Cloudinary (if configured)
+        cloud_res = cloudinary_service.upload_image_bytes(contents, file.filename)
+        if cloud_res:
+            result["image_url"] = cloud_res["url"]
+            result["cloudinary_public_id"] = cloud_res["public_id"]
+
+        # Persist scan to MongoDB Atlas history (if configured)
+        scan_id = db_client.save_scan(result)
+        if scan_id:
+            result["history_id"] = scan_id
+
         return result
     except ValueError as ve:
         raise HTTPException(status_code=400, detail=str(ve))
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Inference error: {str(e)}")
+
+@app.get("/api/history", response_model=HistoryResponse)
+def get_scan_history(
+    limit: int = 50,
+    skip: int = 0,
+    produce_type: Optional[str] = None,
+    freshness_status: Optional[str] = None
+):
+    """Retrieves past scan inspections from MongoDB Atlas."""
+    records = db_client.get_history(
+        limit=limit,
+        skip=skip,
+        produce_type=produce_type,
+        freshness_status=freshness_status
+    )
+    db_health = db_client.check_health()
+    return {
+        "items": records,
+        "total": len(records),
+        "db_connected": db_client.is_connected,
+        "db_status": db_health.get("status", "disconnected")
+    }
+
+@app.delete("/api/history/{scan_id}")
+def delete_scan(scan_id: str):
+    """Deletes an inspection from MongoDB Atlas."""
+    success = db_client.delete_scan(scan_id)
+    if not success:
+        raise HTTPException(status_code=404, detail="Scan record not found or database unavailable.")
+    return {"status": "deleted", "id": scan_id}
+
+@app.delete("/api/history")
+def clear_scan_history():
+    """Clears all scan records from MongoDB Atlas."""
+    deleted_count = db_client.clear_history()
+    return {"status": "cleared", "deleted_count": deleted_count}
 
 @app.get("/api/metrics")
 def get_evaluation_metrics():
