@@ -52,15 +52,15 @@ def start_backend_process():
         bufsize=1
     )
 
-    # Wait up to 10 seconds for backend to start
+    # Wait up to 25 seconds for backend to start and load PyTorch models
     print("[*] Waiting for backend to initialize models and start listening on port 8000...")
-    for _ in range(20):
+    for _ in range(50):
         time.sleep(0.5)
         if is_backend_running():
             print("[+] Backend is UP and healthy on http://127.0.0.1:8000!\n")
             return proc
 
-    print("[!] Warning: Backend started but health probe did not respond within 10s.")
+    print("[!] Warning: Backend started but health probe did not respond within 25s.")
     return proc
 
 
