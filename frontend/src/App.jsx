@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Header from './components/Header';
 import ImageUploader from './components/ImageUploader';
 import CameraCapture from './components/CameraCapture';
@@ -6,7 +6,23 @@ import PredictionCard from './components/PredictionCard';
 import SamplePicker from './components/SamplePicker';
 import AnalyticsView from './components/AnalyticsView';
 import MethodologyView from './components/MethodologyView';
-import { UploadCloud, Camera, Sparkles, AlertCircle } from 'lucide-react';
+import BackendConnectModal from './components/BackendConnectModal';
+import ModelReadyHud from './components/ModelReadyHud';
+import {
+  UploadCloud,
+  Camera,
+  Sparkles,
+  AlertCircle,
+  Server,
+  RefreshCw,
+  ExternalLink
+} from 'lucide-react';
+import {
+  apiFetch,
+  checkBackendHealth,
+  getApiBaseUrl,
+  BACKEND_URL_CHANGED_EVENT
+} from './api/config';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('scanner');
@@ -17,14 +33,30 @@ export default function App() {
   const [predictionResult, setPredictionResult] = useState(null);
   const [apiError, setApiError] = useState(null);
 
-  // Fetch sample images on initial load
-  useEffect(() => {
-    fetchSamples();
+  // Backend connection status state
+  const [isConnectModalOpen, setIsConnectModalOpen] = useState(false);
+  const [backendStatus, setBackendStatus] = useState({
+    isOnline: false,
+    checked: false,
+    url: ''
+  });
+
+  const checkConnection = useCallback(async () => {
+    const currentBase = getApiBaseUrl();
+    const result = await checkBackendHealth();
+    setBackendStatus({
+      isOnline: result.ok,
+      checked: true,
+      url: currentBase,
+      device: result.data?.device,
+      modelReady: result.data?.model_ready
+    });
+    return result.ok;
   }, []);
 
-  const fetchSamples = async () => {
+  const fetchSamples = useCallback(async () => {
     try {
-      const res = await fetch('/api/sample-images');
+      const res = await apiFetch('/api/sample-images');
       if (res.ok) {
         const data = await res.json();
         setSamples(data);
@@ -32,7 +64,25 @@ export default function App() {
     } catch (err) {
       console.warn('Could not fetch sample gallery:', err);
     }
-  };
+  }, []);
+
+  // Initial probe and event listener for backend URL changes
+  useEffect(() => {
+    checkConnection().then((online) => {
+      if (online) {
+        fetchSamples();
+      }
+    });
+
+    const handleUrlChange = () => {
+      checkConnection().then(() => fetchSamples());
+    };
+
+    window.addEventListener(BACKEND_URL_CHANGED_EVENT, handleUrlChange);
+    return () => {
+      window.removeEventListener(BACKEND_URL_CHANGED_EVENT, handleUrlChange);
+    };
+  }, [checkConnection, fetchSamples]);
 
   const handleImageSelected = (imgData) => {
     setSelectedImage(imgData);
@@ -46,8 +96,11 @@ export default function App() {
       setApiError(null);
       setPredictionResult(null);
 
-      // Fetch the sample image as blob
-      const res = await fetch(sample.url);
+      // Fetch the sample image through the configured API client
+      const res = await apiFetch(sample.url);
+      if (!res.ok) {
+        throw new Error(`Failed to download sample (HTTP ${res.status})`);
+      }
       const blob = await res.blob();
       const file = new File([blob], sample.filename, { type: 'image/jpeg' });
       const dataUrl = URL.createObjectURL(blob);
@@ -79,7 +132,7 @@ export default function App() {
     formData.append('file', file);
 
     try {
-      const response = await fetch('/api/predict', {
+      const response = await apiFetch('/api/predict', {
         method: 'POST',
         body: formData
       });
@@ -91,9 +144,21 @@ export default function App() {
 
       const result = await response.json();
       setPredictionResult(result);
+      setBackendStatus((prev) => ({ ...prev, isOnline: true }));
     } catch (err) {
       console.error('Inference error:', err);
-      setApiError(err.message || 'Error occurred while contacting prediction model.');
+      const isMixedOrNet =
+        err.message?.includes('Failed to fetch') ||
+        err.message?.includes('NetworkError') ||
+        err.name === 'TypeError';
+
+      if (isMixedOrNet && !backendStatus.url && window.location.hostname.includes('vercel.app')) {
+        setApiError(
+          'Cannot reach local backend from Vercel. Please click "Connect Backend" above to enter your HTTPS tunnel URL.'
+        );
+      } else {
+        setApiError(err.message || 'Error occurred while contacting prediction model.');
+      }
     } finally {
       setIsAnalyzing(false);
     }
@@ -107,7 +172,32 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <Header activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Header
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        backendStatus={backendStatus}
+        onOpenConnectModal={() => setIsConnectModalOpen(true)}
+      />
+
+      {/* Backend connection helper banner if offline on Vercel */}
+      {backendStatus.checked && !backendStatus.isOnline && (
+        <div className="backend-alert-banner">
+          <div className="alert-banner-content">
+            <Server size={18} className="alert-banner-icon" />
+            <div>
+              <strong>Local ML Backend Not Connected:</strong> If running from Vercel, start your
+              local backend and tunnel, then link it using the button on the right.
+            </div>
+          </div>
+          <button
+            type="button"
+            className="btn-banner-action"
+            onClick={() => setIsConnectModalOpen(true)}
+          >
+            Connect Backend
+          </button>
+        </div>
+      )}
 
       <main>
         {activeTab === 'scanner' && (
@@ -200,20 +290,16 @@ export default function App() {
               />
             </div>
 
-            {/* Right Column: Results Card or Placeholder */}
+            {/* Right Column: Results Card or Live Model HUD */}
             <div>
               {predictionResult ? (
                 <PredictionCard result={predictionResult} previewUrl={selectedImage?.dataUrl} />
               ) : (
-                <div className="glass-card awaiting-card">
-                  <div className="awaiting-icon">🔍</div>
-                  <h3 className="awaiting-title">
-                    Awaiting Produce Image
-                  </h3>
-                  <p className="awaiting-desc">
-                    Snap a photo with your camera, upload an image from your files, or tap any sample preset below to inspect freshness.
-                  </p>
-                </div>
+                <ModelReadyHud
+                  samples={samples}
+                  onSelectSample={handleSelectSample}
+                  disabled={isAnalyzing}
+                />
               )}
             </div>
           </div>
@@ -223,6 +309,15 @@ export default function App() {
 
         {activeTab === 'methodology' && <MethodologyView />}
       </main>
+
+      {/* Backend Connection Modal */}
+      <BackendConnectModal
+        isOpen={isConnectModalOpen}
+        onClose={() => setIsConnectModalOpen(false)}
+        onConnectionChanged={() => {
+          checkConnection().then(() => fetchSamples());
+        }}
+      />
     </div>
   );
 }

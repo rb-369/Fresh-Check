@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Activity, Award, CheckCircle, BarChart3, Database } from 'lucide-react';
+import { apiFetch, getApiUrl, BACKEND_URL_CHANGED_EVENT } from '../api/config';
 
 export default function AnalyticsView() {
   const [metrics, setMetrics] = useState(null);
@@ -8,13 +9,22 @@ export default function AnalyticsView() {
 
   useEffect(() => {
     fetchMetrics();
+
+    const handleUrlChange = () => {
+      fetchMetrics();
+    };
+
+    window.addEventListener(BACKEND_URL_CHANGED_EVENT, handleUrlChange);
+    return () => {
+      window.removeEventListener(BACKEND_URL_CHANGED_EVENT, handleUrlChange);
+    };
   }, []);
 
   const fetchMetrics = async () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/metrics');
+      const res = await apiFetch('/api/metrics');
       if (!res.ok) {
         throw new Error(`Failed to load metrics (HTTP ${res.status}). Ensure evaluate.py has executed.`);
       }
@@ -178,7 +188,7 @@ export default function AnalyticsView() {
           {/* Rendered Matplotlib Heatmap Image */}
           <div className="heatmap-container">
             <img
-              src="/model-artifacts/confusion_matrix.png"
+              src={getApiUrl('/model-artifacts/confusion_matrix.png')}
               alt="Confusion Matrix Heatmap"
               className="heatmap-img"
               onError={(e) => {

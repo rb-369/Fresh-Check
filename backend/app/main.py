@@ -25,13 +25,14 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Enable CORS for React frontend
+# Enable CORS for React frontend (supports Vercel HTTPS deployments & tunnels)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"],
 )
 
 # Mount sample images directory for 1-click test gallery
